@@ -7,10 +7,9 @@ module.exports = () => {
   return {
     mode: "development",
     entry: {
-      main: ["./src/js/index.js", "./src/js/header.js"],
+      main: "./src/js/index.js",
       install: "./src/js/install.js",
     },
-    
     output: {
       filename: "[name].bundle.js",
       path: path.resolve(__dirname, "dist"),
@@ -39,7 +38,7 @@ module.exports = () => {
           {
             src: path.resolve("src/images/logo.png"),
             sizes: [96, 128, 192, 256, 384, 512],
-            destination: path.join("icons", "icons"),
+            destination: path.join("assets", "icons"),
           },
         ],
       }),
