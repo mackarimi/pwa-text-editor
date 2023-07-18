@@ -14,41 +14,22 @@ const initdb = async () =>
 
 // TODO: Add logic to a method that accepts some content and adds it to the database
 export const putDb = async (content) => {
-  try {
-    const db = await initdb();
-    if (db) {
-      const tx = db.transaction('jate', 'readwrite');
-      const store = tx.objectStore('jate');
-      await store.put({ content });
-      await tx.done;
-      console.log('Content added to the database');
-    } else {
-      console.error('Cannot add content to the database. Failed to open the database');
-    }
-  } catch (error) {
-    console.error('Error adding content to the database:', error);
-  }
+  const jateDB = await openDB("jate", 1);
+  const tx = jateDB.transaction("jate", "readwrite");
+  const store = tx.objectStore("jate");
+  const request = store.put({ jate: content });
+  const result = await request;
+  console.log("Data saved to the database", result);
 };
 
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
-  try {
-    const db = await initdb();
-    if (db) {
-      const tx = db.transaction('jate', 'readonly');
-      const store = tx.objectStore('jate');
-      const content = await store.getAll();
-      await tx.done;
-      console.log('Content retrieved from the database:', content);
-      return content;
-    } else {
-      console.error('Cannot retrieve content from the database. Failed to open the database');
-      return [];
-    }
-  } catch (error) {
-    console.error('Error retrieving content from the database:', error);
-    return [];
-  }
+  const jateDB = await openDB("jate", 1);
+  const tx = jateDB.transaction("jate", "readonly");
+  const store = tx.objectStore("jate");
+  const request = store.getAll();
+  const result = await request;
+  console.log(result);
 };
 
 
