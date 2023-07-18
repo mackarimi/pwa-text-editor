@@ -17,9 +17,8 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: "./index.html",
-        title: "JATE",
+        title: "J.A.T.E",
       }),
-
       new InjectManifest({
         swSrc: "./src-sw.js",
         swDest: "src-sw.js",
@@ -27,9 +26,9 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: "Jate - Just Another Text Editor",
-        short_name: "Jate",
-        description: "A simple and powerful text editor",
+        name: "Just Another Text Editor",
+        short_name: "J.A.T.E",
+        description: "Takes notes with JavaScript syntax highlighting!",
         background_color: "#225ca3",
         theme_color: "#225ca3",
         start_url: "/",
@@ -45,7 +44,6 @@ module.exports = () => {
     ],
 
     module: {
-      // CSS loaders
       rules: [
         {
           test: /\.css$/i,
@@ -54,7 +52,6 @@ module.exports = () => {
         {
           test: /\.m?js$/,
           exclude: /node_modules/,
-          // We use babel-loader in order to use ES6.
           use: {
             loader: "babel-loader",
             options: {
