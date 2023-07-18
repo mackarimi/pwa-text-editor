@@ -20,13 +20,14 @@
     "http-server": "^14.1.1",
     "idb": "^6.1.2",
     "style-loader": "^3.2.1",
-    "webpack": "^5.51.1",
-    "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.0.0",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
     "webpack-pwa-manifest": "^4.0.0",
-    "workbox-webpack-plugin": "^6.2.4"
+    "workbox-webpack-plugin": "^7.0.0"
   },
   "dependencies": {
-    "concurrently": "^5.2.0"
+    "concurrently": "^5.2.0",
+    "workbox-strategies": "^7.0.0"
   }
 }
