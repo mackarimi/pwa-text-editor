@@ -56,7 +56,7 @@ Welcome to the `Progressive Web Applications (PWA) Challenge: Text Editor!` This
 ## Screenshots
 
 ![pwa-manifest](./client/src/images/pwa-manifest.jpg)
-![pwa-td](./client/src/images/images/pwa-td.jpg)
+![pwa-td](./client/src/images/pwa-td.jpg)
 
 ## Demo
 
