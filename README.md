@@ -58,6 +58,10 @@ Welcome to the `Progressive Web Applications (PWA) Challenge: Text Editor!` This
 ![pwa-manifest](/Develop/client/src/images/pwa-manifest.jpg)
 ![pwa-td](/Develop/client/src/images/pwa-td.jpg)
 
+## Demo
+
+[![Demo](./client/src/images/video-64.png)](https://www.loom.com/share/eff4c1eb67e342ffae1a76513d27affb?sid=6bf226cd-b155-405b-95a2-89b7d5c73281)
+
 ## License
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
